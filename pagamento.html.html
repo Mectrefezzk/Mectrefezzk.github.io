@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento com Pix</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #000000, #003366);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #003366;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 20px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        header {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 15px 0;
+            border-radius: 12px 12px 0 0;
+        }
+
+        header h1 {
+            font-size: 1.5em;
+        }
+
+        .payment-info {
+            margin-bottom: 20px;
+        }
+
+        .payment-info h2 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .pix-key {
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: #00509e;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            word-break: break-word;
+            color: #ffffff;
+            border: 1px solid #003366;
+        }
+
+        .confirmation {
+            margin-top: 20px;
+        }
+
+        .confirmation h2 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-weight: bold;
+            text-align: left;
+            color: #ffffff;
+        }
+
+        form input {
+            padding: 10px;
+            border: 1px solid #00509e;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #000;
+            background-color: #ffffff;
+        }
+
+        form button {
+            padding: 12px;
+            background-color: #00509e;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #003d7a;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+
+            .pix-key {
+                font-size: 1em;
+            }
+
+            form button {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            form input, form button {
+                font-size: 0.9em;
+            }
+
+            header h1 {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pagamento com Pix</h1>
+        </header>
+        <main>
+            <section class="payment-info">
+                <h2>Chave Pix:</h2>
+                <p class="pix-key">9163f64e-7ff0-4525-bf79-5cc22747b794</p>
+                <p>Faça o pagamento usando a chave acima e depois confirme o pagamento.</p>
+            </section>
+            <section class="confirmation">
+                <h2>Confirmação de Pagamento</h2>
+                <form action="pagamento-concluido.html" method="get">
+                    <label for="name">Seu Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Seu E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    
+                    <button type="submit">Confirmar Pagamento</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p> 𝘼𝙥𝙤́𝙨 𝙛𝙖𝙯𝙚𝙧 𝙤 𝙥𝙖𝙜𝙖𝙢𝙚𝙣𝙩𝙤, 𝙘𝙡𝙞𝙦𝙪𝙚 𝙚𝙢 𝙘𝙤𝙣𝙛𝙞𝙧𝙢𝙖𝙧.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
